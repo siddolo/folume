@@ -6,6 +6,8 @@ I documenti restano normali file `.md` nella directory configurata. Non ci sono 
 
 *WARNING: vibe-coded material.*
 
+![Interfaccia di Folume](screenshot.png)
+
 ## Avvio
 
 Richiede **Linux con `/proc` montato e Node.js ≥ 22.12**. La directory delle note deve essere leggibile e scrivibile dall'utente che esegue Folume. La root predefinita è `./notes`: contiene note Lorem ipsum e cartelle annidate già pronte da aprire e modificare.

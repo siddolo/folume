@@ -1,0 +1,25 @@
+services:
+  folume:
+    build: .
+    init: true
+    restart: unless-stopped
+    user: "${FOLUME_UID:-1000}:${FOLUME_GID:-1000}"
+    ports:
+      - "127.0.0.1:${PORT:-3000}:3000"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+      MARKDOWN_ROOT: /data/notes
+      AUTH_MODE: basic
+      AUTH_USER: ${AUTH_USER:?Impostare AUTH_USER in .env}
+      AUTH_PASSWORD: ${AUTH_PASSWORD:?Impostare AUTH_PASSWORD in .env}
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:-}
+      WATCH_USE_POLLING: ${WATCH_USE_POLLING:-false}
+      WATCH_POLL_INTERVAL: ${WATCH_POLL_INTERVAL:-1500}
+      MAX_FILE_BYTES: ${MAX_FILE_BYTES:-5242880}
+    volumes:
+      - type: bind
+        source: ${MARKDOWN_ROOT:-./notes}
+        target: /data/notes
+        bind:
+          create_host_path: false

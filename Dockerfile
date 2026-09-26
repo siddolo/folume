@@ -12,6 +12,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev && npm cache clean --force && mkdir -p /data/notes && chown node:node /data/notes
 COPY --from=build /app/dist ./dist
+COPY LICENSE ./LICENSE
 COPY --chown=node:node notes /data/notes
 USER node
 EXPOSE 3000

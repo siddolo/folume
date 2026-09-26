@@ -10,6 +10,8 @@ Non introdurre AI, assistant, chatbot, RAG, agenti, MCP, database, store persist
 
 Privilegiare semplicità, affidabilità, Markdown portabile, sicurezza dei path, realtime robusto, prevenzione della perdita di dati, poche dipendenze e facilità di self-hosting.
 
+Distribuire Folume con licenza open source MIT, conservando il testo della licenza e l'avviso di copyright nelle distribuzioni del progetto.
+
 ## Architettura
 
 - TypeScript, React, Tiptap; Next.js App Router oppure architettura equivalente semplice.

@@ -184,3 +184,7 @@ npm run test:docker
 I test usano esclusivamente directory temporanee. Coprono path e symlink, UTF-8, atomicità, concorrenza, API/autenticazione, watcher nativo e polling, eventi interni, Markdown roundtrip e sessioni clean/dirty. I test browser avviano la build di produzione e verificano apertura, autosave, aggiornamenti esterni, CRUD, conflitti e immagini locali. Il test Docker verifica autenticazione, salvataggio atomico e notifiche native per modifiche e creazioni effettuate dall'host sul bind mount.
 
 I requisiti di prodotto sono in [`docs/requirements.md`](docs/requirements.md); le convenzioni di sviluppo in [`AGENTS.md`](AGENTS.md). `.work/` è riservata agli appunti operativi, separati dalla documentazione del prodotto.
+
+## Licenza
+
+Folume è distribuito con [licenza MIT](LICENSE). Puoi usarlo, modificarlo e distribuirlo anche per scopi commerciali, conservando l'avviso di copyright e il testo della licenza. Le dipendenze mantengono le rispettive licenze.

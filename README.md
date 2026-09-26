@@ -10,7 +10,7 @@ I documenti restano normali file `.md` nella directory configurata. Non ci sono 
 
 ## Avvio
 
-Richiede **Linux con `/proc` montato e Node.js ≥ 22.12**. La directory delle note deve essere leggibile e scrivibile dall'utente che esegue Folume. La root predefinita è `./notes`: contiene note Lorem ipsum e cartelle annidate già pronte da aprire e modificare.
+Richiede **Linux con `/proc` montato e Node.js ≥ 22.12**. La directory delle note deve essere leggibile e scrivibile dall'utente che esegue Folume. La root predefinita è `./notes`: contiene file di demo già pronti da aprire e modificare.
 
 ```sh
 npm ci
@@ -41,13 +41,13 @@ npm run build
 npm start
 ```
 
-Apri `http://127.0.0.1:3000` e inserisci le credenziali Basic richieste dal browser. Per l'accesso diretto dalla LAN puoi impostare `HOST=0.0.0.0`. Per pubblicazione web usa HTTPS tramite reverse proxy.
+Apri `http://127.0.0.1:3000` e inserisci le credenziali che hai configurato in `.env`. Per l'accesso diretto dalla LAN puoi impostare `HOST=0.0.0.0`. Per pubblicazione web usa HTTPS tramite reverse proxy.
 
-Apri **Benvenuto.md** dalla sidebar per iniziare. Per usare i tuoi documenti, cambia `MARKDOWN_ROOT` con una directory esistente, ad esempio `/srv/markdown`. Le note di esempio sono normali file modificabili: non vengono rigenerate né aggiunte automaticamente a directory personalizzate.
+Per usare i tuoi documenti, cambia `MARKDOWN_ROOT` con una directory esistente, ad esempio `/srv/markdown`.
 
 ## Uso
 
-- Seleziona una nota dalla sidebar. Il path è riportato nell'URL, per esempio `/?file=notes/example.md`.
+- Seleziona una nota dalla sidebar.
 - Scrivi nell'editor visuale: l'autosave parte dopo **750 ms** dall'ultima modifica. `Ctrl/Cmd+S` salva subito.
 - La toolbar supporta H1–H6, grassetto, corsivo, barrato, codice, citazioni, elenchi, task, link, immagini, tabelle, separatori, hard break e undo/redo.
 - **Sorgente** permette di modificare direttamente il Markdown. L'apertura e il cambio di modalità non salvano né riscrivono automaticamente il documento.
@@ -56,7 +56,12 @@ Apri **Benvenuto.md** dalla sidebar per iniziare. Per usare i tuoi documenti, ca
 - I pulsanti in basso nella sidebar rinominano o eliminano la selezione. La cancellazione di una directory elimina tutto il suo contenuto, inclusi gli asset, dopo conferma.
 - Trascina il divisore per ridimensionare la sidebar, oppure usa le frecce quando ha il focus. Il pulsante sole/luna cambia tema.
 
-Tema, larghezza e cartelle espanse sono le sole informazioni conservate in localStorage. **Il testo non salvato rimane soltanto nella memoria della scheda**; il browser chiede conferma prima di abbandonarlo. In caso di errore o cancellazione puoi anche scaricarlo come `.md`.
+### Memoria di sessione
+Tema, larghezza e cartelle espanse sono le sole informazioni conservate in localStorage.
+
+**Il testo non salvato rimane soltanto nella memoria della scheda**; il browser chiede conferma prima di abbandonarlo.
+
+In caso di errore o cancellazione puoi anche scaricarlo come `.md`.
 
 ### Modifiche esterne e conflitti
 
